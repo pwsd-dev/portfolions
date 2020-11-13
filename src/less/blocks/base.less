@@ -14,8 +14,20 @@
   .font(@font; @fontRegular);
 }
 
+@font-face {
+  .font(@Montserrat; "@{Montserrat}-Bold");
+}
+
+@font-face {
+  .font(@Montserrat; "@{Montserrat}-Medium");
+}
+
+@font-face {
+  .font(@Montserrat; "@{Montserrat}-Regular");
+}
+
 body {
-  font-family: @fontRegular;
+  font-family: "@{Montserrat}-Regular";
 }
 a, button{
   cursor: pointer;
