@@ -331,6 +331,18 @@ input:focus {
 .page__subtitle {
   font-family: "Montserrat-Regular";
   letter-spacing: 2px;
+  line-height: 37px;
+  font-size: 30px;
+  color: #fff;
+}
+
+.page__subtitle span {
+  font-family: "Montserrat-Bold";
+}
+
+.page__title {
+  font-family: "Montserrat-Regular";
+  text-transform: uppercase;
 }
 
 .header {
@@ -353,11 +365,32 @@ input:focus {
   word-wrap: break-word;
   margin-left: 15px;
   margin-right: 15px;
+  width: calc(25% - 30px);
 }
 
 .header-block__navbar-link a {
   text-decoration: none;
   color: #fff;
+}
+
+.banner {
+  background-image: url("../assets/img/bg-dark.jpg");
+  padding-bottom: 417px;
+}
+
+.banner-block {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.banner-block__logo {
+  padding-top: 380px;
+}
+
+.banner-block .page__subtitle {
+  padding-bottom: 17px;
 }
 
 @media screen and (max-width: 920px) {
