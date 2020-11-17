@@ -17,5 +17,71 @@
     &__title {
         font-family: "@{Montserrat}-Regular";
         text-transform: uppercase;
+        &-h2 {
+            font-family: "@{Montserrat}-Bold";
+            font-size: 40px;
+            line-height: 49px;
+            text-transform: uppercase;
+            color: #fff;
+        }
     }
+
+    &__text {
+        font-family: "@{Montserrat}-Regular";
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 1px;
+        color: #fff;
+        &_phone, &_email {
+            font-family: "@{Montserrat}-Regular";
+            font-size: 16px;
+            line-height: 28px;
+            letter-spacing: 1px;
+            color: #fff;
+            padding-bottom: 40px;
+        }
+
+    }
+
+    &__btn {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+
+        border-radius: 5px;
+        height: 68px;
+        font-size: 20px;
+        letter-spacing: 1px;
+        line-height: 30px;
+        font-family: '@{PTSans}-Bold';
+        text-transform: uppercase;
+        border: none;
+        color: @color_white;
+        background-color: transparent;
+        border: 1px solid #fff;
+            &:hover{
+                    color: #262626;
+                    background-color: @color_white;
+
+                    transition: all ease-out 0.5s;
+                }
+    }
+
+    &__copyright {
+        color: #707070;
+        font-size: 12px;
+        line-height: 15px;
+        font-family: "@{Montserrat}-Regular";
+
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #9f9f9f;
+        letter-spacing: 2px;
+    }
+
+
 }
