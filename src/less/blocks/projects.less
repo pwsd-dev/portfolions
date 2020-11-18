@@ -2,6 +2,8 @@
 
     background-image: url("../assets/img/bg-dark.png");
     padding-bottom: 200px;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
 
     &-block {
 
@@ -58,4 +60,25 @@
             }
         }
     }
+
+    &.animated {
+        opacity: 1;
+
+        .page__title-h2 {
+            .animated({
+                .slideInDown();
+                .repeat(1);
+                .delay(5s);
+            });
+        }
+
+        .projects-block-content-wrapper {
+            .animated({
+                .slideInUp();
+                .repeat(1);
+                .delay(1s);
+            });
+        }
+    }
+
 }

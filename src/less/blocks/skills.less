@@ -3,6 +3,8 @@
     background-image: url("../assets/img/bg-dark.png");
     //height: 700px;
     padding-bottom: 130px;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
 
 
 
@@ -64,5 +66,27 @@
         }
        
 
+    }
+
+    &.animated {
+        opacity: 1;
+
+        .page__title-h2 {
+            .animated({
+                .rotateInDownLeft();
+                .repeat(1);
+                .delay(0.5s);
+            });
+        }
+
+        .page__subtitle {
+            .animated({
+                .backInLeft();
+                .repeat(1);
+                .delay(0.8s);
+            });
+        }
+
+        
     }
 }

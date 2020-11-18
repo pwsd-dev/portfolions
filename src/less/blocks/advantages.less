@@ -2,6 +2,8 @@
 
     background-color: #f6d667;
     padding-bottom: 180px;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
 
     &-block {
         
@@ -56,15 +58,168 @@
                     font-family: "@{Montserrat}-Regular";
                     font-size: 15px;
                     padding-left: 15px;
-                    ::before {
-                        content: '';
-                        width: 20px;
-                        height: 20px;
-                        background-color: black;
-                        display: inline-block;
-                    }
+                    
                 }
+
+
             }
         }
+    }
+
+    &.animated {
+        opacity: 1;
+        .advantages-block-content__item_number {
+            .animated({
+                .fadeInRight();
+                .repeat(1);
+                .delay(0.5s);
+            });
+        }
+
+        .advantages-block-content__item_description {
+            .animated({
+                .fadeInLeft();
+                .repeat(1);
+                .delay(0.5s);
+            });
+        }
+
+
+        .page__title-h2 {
+            .animated({
+                .fadeInRight();
+                .repeat(1);
+                .delay(0.5s);
+            });
+        }
+
+        .advantages-block-content__item {
+            &:nth-of-type(1){
+                .animated({
+                    .delay(.6s);
+                });
+            };
+
+            &:nth-of-type(2){
+                .advantages-block-content__item_number {
+                    .animated({
+                        .delay(1.2s);
+                    });
+                }
+            };
+
+            &:nth-of-type(3){
+                .advantages-block-content__item_number {
+                    .animated({
+                        .delay(1.8s);
+                    });
+                }
+            };
+
+            &:nth-of-type(4){
+                .advantages-block-content__item_number {
+                    .animated({
+                        .delay(2.4s);
+                    });
+                }
+            };
+
+            &:nth-of-type(5){
+                .advantages-block-content__item_number {
+                    .animated({
+                        .delay(3s);
+                    });
+                }
+            };
+
+            &:nth-of-type(6){
+                .advantages-block-content__item_number {
+                    .animated({
+                        .delay(3.6s);
+                    });
+                }
+            };
+
+            &:nth-of-type(7){
+                .advantages-block-content__item_number {
+                    .animated({
+                        .delay(4.2s);
+                    });
+                }
+            };
+
+            &:nth-of-type(8){
+                .advantages-block-content__item_number {
+                    .animated({
+                        .delay(4.8s);
+                    });
+                }
+            };
+        }
+
+        .advantages-block-content__item {
+            &:nth-of-type(1){
+                .animated({
+                    .delay(.6s);
+                });
+            };
+
+            &:nth-of-type(2){
+                .advantages-block-content__item_description {
+                    .animated({
+                        .delay(1.2s);
+                    });
+                }
+            };
+
+            &:nth-of-type(3){
+                .advantages-block-content__item_description {
+                    .animated({
+                        .delay(1.8s);
+                    });
+                }
+            };
+
+            &:nth-of-type(4){
+                .advantages-block-content__item_description {
+                    .animated({
+                        .delay(2.4s);
+                    });
+                }
+            };
+
+            &:nth-of-type(5){
+                .advantages-block-content__item_description {
+                    .animated({
+                        .delay(3s);
+                    });
+                }
+            };
+
+            &:nth-of-type(6){
+                .advantages-block-content__item_description {
+                    .animated({
+                        .delay(3.6s);
+                    });
+                }
+            };
+
+            &:nth-of-type(7){
+                .advantages-block-content__item_description {
+                    .animated({
+                        .delay(4.2s);
+                    });
+                }
+            };
+
+            &:nth-of-type(8){
+                .advantages-block-content__item_description {
+                    .animated({
+                        .delay(4.8s);
+                    });
+                }
+            };
+        }
+        
     }
 }

@@ -44,6 +44,12 @@ function animation(NodeElement, TargetElement){
 function animations(){
     // Получаем нужный элемент
     animation('.banner');
+    animation('.skills');
+    animation('.services');
+    animation('.advantages');
+    animation('.projects');
+    animation('.about');
+    //animation('.page__subtitle');
     // animation('.banner', '.page__title-h1');
 }
 

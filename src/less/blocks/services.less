@@ -2,7 +2,8 @@
 
     background-image: url("../assets/img/bg-dark.png");
     padding-bottom: 40px;
-   
+    opacity: 0;
+    transition: opacity .5s ease-out;
 
     &-block {
         
@@ -19,6 +20,7 @@
                 color: #fff;
                 opacity: 0.1;
                 text-transform: uppercase;
+                
             }
 
             .page__title-h2 {
@@ -79,6 +81,25 @@
                 text-align: center;
                 padding-bottom: 43px;
             }
+        }
+    }
+    
+    &.animated {
+        opacity: 1;
+        .page__title-h2 {
+            .animated({
+                .fadeInRight();
+                .repeat(1);
+                .delay(0.5s);
+            });
+        }
+
+        .services-block-content {
+            .animated({
+                .backInLeft();
+                .repeat(1);
+                .delay(0.5s);
+            });
         }
     }
 }

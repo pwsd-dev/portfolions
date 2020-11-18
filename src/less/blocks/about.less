@@ -2,6 +2,8 @@
 
     background-image: url("../assets/img/bg-dark.png");
     padding-bottom: 150px;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
     &-block {
 
         &-description {
@@ -56,5 +58,19 @@
         }
        
     }
+
+    &.animated {
+        opacity: 1;
+
+        .page__title-h2 {
+            .animated({
+                .fadeInRight();
+                .repeat(1);
+                .delay(.5s);
+            });
+        }
+    }
+
     
+        
 }
