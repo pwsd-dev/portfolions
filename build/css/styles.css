@@ -329,6 +329,11 @@ input:focus {
   z-index: -1;
 }
 
+.canvas {
+  left: 0;
+  top: 0;
+}
+
 .page {
   position: relative;
   z-index: 1;
@@ -1450,5 +1455,11 @@ input:focus {
   .debugGrid > div {
     padding-left: 15px;
     padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .canvas {
+    visibility: hidden;
   }
 }
