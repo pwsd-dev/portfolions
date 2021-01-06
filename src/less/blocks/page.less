@@ -65,12 +65,20 @@
         &_icon_arrow-top,
         &_icon_arrow-left{
             .sprite(@icon-up);
-            position: absolute;
+            //position: absolute;
+            //top: 0;
+            //bottom: 0;
             transition: bottom 0.5s ease-out;
+            //border: none;
+            position: fixed;
+            bottom: 62px;
+            left: 37px;
+            //color: @color_yellow-1;
         }
             &:hover{
-                    color: #262626;
-                    background-color: @color_white;
+                    //color: #262626;
+                    //color: @color_theme-1;
+                    background-color: @color_theme-1;
 
                     transition: all ease-out 0.5s;
                 }
@@ -102,13 +110,17 @@
         opacity: 0;
         padding: 0;
         width: 60px;
+        border: none;
+        //margin-top: 20px;
         &:hover,
         &:focus{
             background: rgba(255, 255, 255, 0.1);
         }
         span{
-            left: 3px;
-            bottom: 10px;
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+
         }
         .sm(display, none);
     }
