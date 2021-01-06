@@ -41,8 +41,7 @@ let lessFiles = [
 	'./src/less/+(styles|styles-per).less',
 ];
 const jsFiles = [
-	'./src/js/debug-grid-create.js',
-	'./src/js/main.js',
+	'./src/js/*.js'
 ];//порядок сборки js файлов
 
 function clear() {
