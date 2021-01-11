@@ -531,6 +531,11 @@ input:focus {
   padding-top: 380px;
 }
 
+.banner-block__img {
+  position: relative;
+  z-index: 50;
+}
+
 .banner-block .page__subtitle {
   padding-bottom: 17px;
   -webkit-animation-duration: 1s;
