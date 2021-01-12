@@ -4,24 +4,44 @@
     padding-bottom: 180px;
     opacity: 0;
     transition: opacity .2s ease-in-out;
-
+    overflow: hidden;
+    .sm-block({
+        padding-bottom: 80px;
+        
+    });
     &-block {
         
         &-description {
             position: relative;
             padding-top: 20px;
             padding-bottom: 85px;
+            .sm-block({
+                padding-bottom: 10px;
+                
+            });
 
             .page__subtitle_big {
+                .sm-block({
+                    font-size: 35px;
+                    color: black;
+                    padding-top: 10px;
+                    //padding-bottom: 10px;
+                    padding-bottom: 0px;
+                    
+                });
                 text-align: center;
                 font-family: "@{Montserrat}-Regular";
                 font-size: 100px;
                 line-height: 146px;
-                color: #fff;
+                //color: #fff;
                 opacity: 0.1;
                 text-transform: uppercase;
                 color: #363636;
                 padding-top: 85px;
+                .sm-block({
+                    font-size: 35px;
+                    color: black;
+                });
             }
 
             .page__title-h2 {
@@ -45,6 +65,7 @@
             &__item {
                 .col();
                 .size(3);
+                .size-xs(6);
                 display: flex;
 
                 &_number {
@@ -54,6 +75,10 @@
                 }
 
                 &_description {
+                    .sm-block({
+                        font-size: 13px;
+                        
+                    });
                     align-self: center;
                     font-family: "@{Montserrat}-Regular";
                     font-size: 15px;

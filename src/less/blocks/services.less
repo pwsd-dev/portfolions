@@ -1,6 +1,6 @@
 .services {
 
-    background-image: url("../assets/img/bg-dark.png");
+    //background-image: url("../assets/img/bg-dark.png");
     padding-bottom: 40px;
     opacity: 0;
     transition: opacity .5s ease-out;
@@ -13,6 +13,9 @@
             padding-bottom: 85px;
 
             .page__subtitle_big {
+                .sm-block({
+                    font-size: 60px;
+                });
                 text-align: center;
                 font-family: "@{Montserrat}-Regular";
                 font-size: 100px;
@@ -43,6 +46,7 @@
             &__item {
                 .col();
                 .size(3);
+                .size-xs(6);
                 flex-direction: column;
                 position: relative;
                 margin-bottom: 122px;

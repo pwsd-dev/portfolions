@@ -1,5 +1,82 @@
-.page{
+.bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    .wrapper {
+        height: inherit;
+    }
+    &-grid {
+        .row-flex();
+        height: inherit;
+        &__line {
+            .size(3);
+            .size-md(1.32);
+            .size-sm(2);
+            .size-xs(4);
+            position: relative;
 
+            &::before {
+                content: "";
+            }
+
+            &::before,
+            &::after {
+
+                // background: @color_white;
+                background: rgba(255, 255, 255, 0.1);
+                width: 1px;
+                height: 100%;
+                position: absolute;
+                top: 0;
+            }
+
+            &:last-child {
+                &::after {
+                    content: "";
+                    right: 0;
+                }
+                .md(display, none);
+            }
+
+            &:nth-child(3){
+                .md-block({
+                    &::after {
+                        content: "";
+                        right: 0;
+                    }
+                });
+                .sm(display, none);
+
+            }
+            &:nth-child(2){
+                .sm-block({
+                    &::after {
+                        content: "";
+                        right: 0;
+                    }
+                });
+                .xs(display, none);
+            }
+            &:first-child{
+                .xs-block({
+                    &::after {
+                        content: "";
+                        right: 0;
+                    }
+                });
+            }
+        }
+    }
+}
+
+.page{
+    position: relative;
+    background: @color_bg;
+    z-index: 1;
+    min-height: 100vh;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+    transition: all .35s;
     &__subtitle {
         font-family: "@{Montserrat}-Regular";
         letter-spacing: 2px;
@@ -7,7 +84,11 @@
         font-size: 30px;
         color: #fff;
         &_big {
-            
+            .sm-block({
+                font-size: 60px;
+                //text-align: center;
+                //.size(2);
+            });
         }
         span {
             font-family: "@{Montserrat}-Bold";

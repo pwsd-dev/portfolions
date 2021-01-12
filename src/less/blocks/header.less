@@ -4,6 +4,7 @@
     z-index: 20;
     width: 100%;
     background: rgba(2, 2, 2, 0.4);
+    overflow: hidden;
     &-block {
         &__navbar {
             .row-flex();
@@ -12,6 +13,10 @@
             &-link {
                 .col();
                 .size(3);
+                .size-xs(6);
+                .sm-block({
+                    padding-top: 10px;
+                });
                 justify-content: space-around;
                 color: #fff;
                 font-family: "@{Montserrat}-Regular";
@@ -26,6 +31,9 @@
                     font-size: 16px;
                     padding-left: 5px;
                     font-family: "@{Montserrat}-Regular";
+                    .sm-block({
+                        font-size: 14px;
+                    });
                     &:hover {
                         color: @color_theme-1;
                     }

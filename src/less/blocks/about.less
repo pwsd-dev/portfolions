@@ -1,15 +1,23 @@
 .about {
 
-    background-image: url("../assets/img/bg-dark.png");
+    //background-image: url("../assets/img/bg-dark.png");
     padding-bottom: 150px;
     opacity: 0;
     transition: opacity .2s ease-in-out;
+    overflow: hidden;
+    
     &-block {
-
+        
         &-description {
             position: relative;
             padding-top: 20px;
+            
             .page__subtitle_big {
+                .sm-block({
+                    font-size: 60px;
+                    padding: 10px 0 10px;
+                    
+                });
                 text-align: center;
                 font-family: "@{Montserrat}-Regular";
                 font-size: 100px;
@@ -39,21 +47,33 @@
             &__photo {
                 .col();
                 .size(4);
+                .size-xs(12);
                 z-index: 50;
             }
 
             &__description {
                 padding-left: 128px;
                 padding-top: 80px;
+                .size-xs(12);
+                .sm-block({
+                    text-align: left;
+                    padding-top: 20px;
+                    flex-direction: column;
+                    padding-left: 0;
+                });
                 .col();
                 .size(8);
 
                 .page__text {
                     padding-bottom: 45px;
+                    .sm-block({
+                        text-align: left;
+                    });
                 }
 
                 .page__btn {
                     .size(4);
+                    .size-xs(12);
                 }
             }
         }
