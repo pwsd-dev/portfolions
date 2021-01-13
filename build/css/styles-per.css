@@ -1559,6 +1559,8 @@ input:focus {
 
 .footer {
   background-color: #363636;
+  position: -webkit-sticky;
+  position: sticky;
   overflow: hidden;
   padding: 50px 0;
   bottom: 0;
