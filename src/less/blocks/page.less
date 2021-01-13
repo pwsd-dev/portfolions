@@ -13,7 +13,11 @@
             .size(3);
             .size-md(1.32);
             .size-sm(2);
-            .size-xs(4);
+            //.size-xs(1);
+            .xs-block({
+                display: none;
+                
+            });
             position: relative;
 
             &::before {
@@ -77,12 +81,57 @@
     min-height: 100vh;
     box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
     transition: all .35s;
+    &__figure {
+        position: relative;
+        text-align: center;
+        margin: 7px 10px;
+        .sm( margin, 7px 10px);
+        .xs( margin, 10px 0);
+        // max-height: 262px;
+        &:hover {
+            .page__img {
+                opacity: 0.19;
+            }
+            .page__title-h3 {
+                transform: translate3d(0, 10px, 0);
+            }
+
+            .page__btn {
+                transform: translate3d(0, -10px, 0);
+            }
+
+            .page__title-h3,
+            .page__text,
+            .page__btn {
+                opacity: 1;
+            }
+        }
+    }
+    &_bold {
+        &-mob {
+            font-family: @fontBold;
+        }
+    }
+    
     &__subtitle {
         font-family: "@{Montserrat}-Regular";
         letter-spacing: 2px;
         line-height: 37px;
         font-size: 30px;
         color: #fff;
+        &_mob {
+            font-family: "@{Montserrat}-Regular";
+            letter-spacing: 2px;
+            line-height: 27px;
+            font-size: 20px;
+            color: #fff;
+            padding-left: 10px;
+            display: none;
+            .xs-block({
+                display: block;
+                position: fixed;
+            });
+        }
         &_big {
             .sm-block({
                 font-size: 60px;

@@ -1,0 +1,16 @@
+extends ../templates/template
+block base
+	base(href='../')
+block title
+	title Portfolio Project page
+block append style
+block content
+	include ../modules/header-module
+	a(href='./projects/projects.html').btn-back.page__btn
+		.page__btn_icon_arrow-left
+		span назад
+	include content
+block append script
+	script(src='assets/data/data.json')
+	script(src='js/render-content.js')
+	script(src='js/tabs.js')

@@ -5,6 +5,19 @@
     .wrapper();
 }
 
+html {
+  // scroll-behavior: smooth;
+  &:not([data-scroll='0']) {
+ 
+  
+    header {
+      background: rgba(2, 2, 2, 0.4);
+      box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+  }
+}
+
 .scrollbar(@color_scrollbar-track, @color_scrollbar-thumb);
 
 @font-face {

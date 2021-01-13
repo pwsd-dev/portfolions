@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru"> 
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+		<base href="../">
+		<title>Portfolio Project page</title>
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
+	</head>
+	<body>
+		<main class="page">
+			<button class="debugGrid-btn debugGrid-btn__create" onclick="debugGridCreate()"></button>
+			<button class="debugGrid-btn debugGrid-btn__remove debugGrid-btn__hidden" onclick="debugGridRemove()"></button>
+			<div class="debugGrid debugGrid__z-index-negative"></div>
+			<header class="header">
+				<div class="wrapper">
+					<div class="header-block">
+						<nav class="header-block__navbar">
+							<div class="header-block__navbar-link"><a href="../">Nikita Shvetsov</a></div>
+							<div class="header-block__navbar-link"><a href="#skills">Навыки</a></div>
+							<div class="header-block__navbar-link"><a href="#projects">Проекты</a></div>
+							<div class="header-block__navbar-link"><a href="#about">Обо мне</a></div>
+							<div class="page__subtitle_mob">Nikita <span class="page_bold-mob">Shvetsov</span></div>
+						</nav>
+					</div>
+				</div>
+			</header>
+			<button class="btn-scrollTop page__btn">
+				<div class="page__btn_icon_arrow-top"> </div><span>наверх</span>
+			</button><a class="btn-back page__btn" href="./projects/projects.html">
+				<div class="page__btn_icon_arrow-left"></div><span>назад</span></a>
+			<section class="project-page">
+				<div class="wrapper">
+					<div class="project-page-content tab-contents" id="tabs">
+						<div class="project-page-content__description">
+							<div class="tab-content is-active">
+								<div class="page__text">Мы – группа компаний site, а лучше сказать – группа людей. </div>
+							</div>
+						</div>
+						<div class="project-page-content__info">
+							<aside class="project-info">
+								<div class="project-info__element">
+									<h3 class="page__title-h3">Ссылка:</h3><a class="page__link page__link_site" href="#" target="_blank">site.com</a>
+								</div>
+								<div class="project-info__element project-info__element_list">
+									<h3 class="page__title-h3">Список страниц:</h3>
+									<nav class="tab-nav">
+										<div class="tab-link is-active" href="">О проекте</div>
+									</nav>
+								</div>
+								<div class="project-info__element project-info__task">
+									<h3 class="page__title-h3">Задача:</h3>
+									<p class="page__text">Разработка сайта для компании site.</p>
+								</div>
+								<div class="project-info__element project-info__technology">
+									<h3 class="page__title-h3">Используемые технологии:</h3>
+									<ul class="page__list"></ul>
+								</div>
+								<div class="project-info__element project-info__days">
+									<h3 class="page__title-h3">Сроки:</h3>
+									<p class="page__text"> <span class="page__number_days">40 </span> дней.</p>
+								</div>
+								<div class="project-info__element project-info__date">
+									<h3 class="page__title-h3">Дата создания:</h3>
+									<p class="page__text">9 февраля 2019</p>
+								</div>
+							</aside>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<script src="js/main.js"></script>
+		<script src="js/canvans-rings.js"></script>
+		<script src="js/scroll-anchors.js"></script>
+		<script src="js/scroll-up.js"></script>
+		<script src="js/store-scroll.js"></script>
+		<script src="assets/data/data.json"></script>
+		<script src="js/render-content.js"></script>
+		<script src="js/tabs.js"></script>
+	</body>
+</html>

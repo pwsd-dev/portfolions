@@ -47,7 +47,7 @@ function animations(){
     animation('.skills');
     animation('.services');
     animation('.advantages');
-    animation('.projects');
+    //animation('.projects');
     animation('.about');
     //animation('.page__subtitle');
     // animation('.banner', '.page__title-h1');

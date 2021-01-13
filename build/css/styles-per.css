@@ -167,6 +167,11 @@ img {
   padding-right: 30px;
 }
 
+html:not([data-scroll='0']) header {
+  background: rgba(2, 2, 2, 0.4);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+
 ::-webkit-scrollbar {
   width: 5px;
   height: 0px;
@@ -403,12 +408,52 @@ input:focus {
   min-height: 100vh;
 }
 
+.page__figure {
+  position: relative;
+  text-align: center;
+  margin: 7px 10px;
+}
+
+.page__figure:hover .page__img {
+  opacity: 0.19;
+}
+
+.page__figure:hover .page__title-h3 {
+  -webkit-transform: translate3d(0, 10px, 0);
+          transform: translate3d(0, 10px, 0);
+}
+
+.page__figure:hover .page__btn {
+  -webkit-transform: translate3d(0, -10px, 0);
+          transform: translate3d(0, -10px, 0);
+}
+
+.page__figure:hover .page__title-h3,
+.page__figure:hover .page__text,
+.page__figure:hover .page__btn {
+  opacity: 1;
+}
+
+.page_bold-mob {
+  font-family: 'OpenSans-Bold';
+}
+
 .page__subtitle {
   font-family: "Montserrat-Regular";
   letter-spacing: 2px;
   line-height: 37px;
   font-size: 30px;
   color: #fff;
+}
+
+.page__subtitle_mob {
+  font-family: "Montserrat-Regular";
+  letter-spacing: 2px;
+  line-height: 27px;
+  font-size: 20px;
+  color: #fff;
+  padding-left: 10px;
+  display: none;
 }
 
 .page__subtitle span {
@@ -525,7 +570,6 @@ input:focus {
   position: fixed;
   z-index: 20;
   width: 100%;
-  background: rgba(2, 2, 2, 0.4);
   overflow: hidden;
 }
 
@@ -881,6 +925,7 @@ input:focus {
   opacity: 1;
   padding-top: 5px;
   padding-bottom: 10px;
+  overflow: hidden;
 }
 
 .services-block-content .page__subtitle {
@@ -1598,6 +1643,10 @@ input:focus {
     right: 0;
   }
 
+  .page__figure {
+    margin: 7px 10px;
+  }
+
   .page__subtitle_big {
     font-size: 60px;
   }
@@ -1692,7 +1741,7 @@ input:focus {
 
 @media screen and (max-width: 576px) {
   .bg-grid__line {
-    width: 30.23333333%;
+    display: none;
   }
 
   .bg-grid__line:nth-child(2) {
@@ -1704,12 +1753,33 @@ input:focus {
     right: 0;
   }
 
+  .page__figure {
+    margin: 10px 0;
+  }
+
+  .page__subtitle_mob {
+    display: block;
+    position: fixed;
+  }
+
   .header-block__navbar-link {
     width: 46.9%;
   }
 
+  .header-block__navbar-link {
+    display: none;
+  }
+
+  .skills {
+    padding-bottom: 0;
+  }
+
   .skills-block-content__item {
     width: 46.9%;
+  }
+
+  .services {
+    padding-bottom: 0;
   }
 
   .services-block-content__item {

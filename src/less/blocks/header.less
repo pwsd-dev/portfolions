@@ -3,19 +3,24 @@
     //position: sticky;
     z-index: 20;
     width: 100%;
-    background: rgba(2, 2, 2, 0.4);
+    //background: rgba(2, 2, 2, 0.4);
     overflow: hidden;
     &-block {
         &__navbar {
             .row-flex();
             padding-top: 26px;
             padding-bottom: 20px;
+            
             &-link {
                 .col();
                 .size(3);
                 .size-xs(6);
                 .sm-block({
                     padding-top: 10px;
+                });
+                .xs-block({
+                    display: none;
+                    
                 });
                 justify-content: space-around;
                 color: #fff;
