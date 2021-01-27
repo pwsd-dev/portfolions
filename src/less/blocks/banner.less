@@ -1,19 +1,31 @@
 .banner{
 
-    //background-color: #363636;
-    //background-image: url("../assets/img/bg-dark.png");
-    padding-bottom: 385px;
-    overflow: hidden;
+    position: relative;
+    //padding-bottom: 385px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 80px;
+    transition: opacity 2s ease-out;
+    height: 100vh;
+    
     .sm-block({
         height: 100vh;
     });
+
+    .canvas {
+        overflow: hidden;
+        
+    }
 
     &-block {
         display: flex;
         justify-content: center;
         z-index: 30;
+        overflow: hidden;
         &__logo {
-            padding-top: 380px;
+            
         }
 
         &__img {

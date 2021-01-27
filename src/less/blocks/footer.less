@@ -1,7 +1,7 @@
 .footer {
     background-color: #363636;
-    //position: absolute;
-    position: sticky;
+    position: absolute;
+    //position: sticky;
     overflow: hidden;
     padding: 50px 0;
     bottom: 0;
@@ -9,11 +9,13 @@
 
     &-content {
         .row-flex();
-
+        
         &__item {
             .col();
             .size(3);
-
+            .sm-block({
+                .size(12);
+            });
             .page__title-h2 {
                 padding-bottom: 28px;
             }

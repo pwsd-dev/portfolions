@@ -1,18 +1,21 @@
 @columns: 12;
 @atom: (100% / @columns);
 
+@break_bmd: 1370px;
 @break_md: 920px;
 @break_sm: 720px;
 @break_xs: 576px;
 @break_xxs: 420px;
 
 @offset: 30px;
+@offset_bmd: @offset;
 @offset_md: @offset;
 @offset_sm: @offset;
 @offset_xs: @offset;
 @offset_xxs: @offset;
 
 @offset_one_side: (@offset / 2);
+@offset_bmd_one_side: (@offset_bmd / 2);
 @offset_md_one_side: (@offset_md / 2);
 @offset_sm_one_side: (@offset_sm / 2);
 @offset_xs_one_side: (@offset_xs / 2);
@@ -87,6 +90,11 @@
     width: ~"calc(@{val} - @{offset})";
 }
 
+.size-bmd(@n){
+    @val: 100% / @columns * @n;
+    .bmd(width, ~"calc(@{val} - @{offset_bmd})");
+}
+
 .size-md(@n){
     @val: 100% / @columns * @n;
     .md(width, ~"calc(@{val} - @{offset_md})");
@@ -137,6 +145,38 @@
 .shift-padding-right(@n){
     @val: 100% / @columns * @n;
     padding-right: ~"calc(@{val} + @{offset_one_side})";
+}
+
+.shift-bmd(@n){
+    @val: 100% / @columns * @n;
+    .bmd(margin-left, ~"calc(@{val} + @{offset_bmd_one_side})");
+    .bmd(margin-right, ~"calc(@{val} + @{offset_bmd_one_side})");
+}
+
+.shift-bmd-left(@n){
+    @val: 100% / @columns * @n;
+    .bmd(margin-left, ~"calc(@{val} + @{offset_bmd_one_side})");
+}
+
+.shift-bmd-right(@n){
+    @val: 100% / @columns * @n;
+    .bmd(margin-right, ~"calc(@{val} + @{offset_bmd_one_side})");
+}
+
+.shift-bmd-padding(@n){
+    @val: 100% / @columns * @n;
+    .bmd(padding-left, ~"calc(@{val} + @{offset_bmd_one_side})");
+    .bmd(padding-right, ~"calc(@{val} + @{offset_bmd_one_side})");
+}
+
+.shift-bmd-padding-left(@n){
+    @val: 100% / @columns * @n;
+    .bmd(padding-left, ~"calc(@{val} + @{offset_bmd_one_side})");
+}
+
+.shift-bmd-padding-right(@n){
+    @val: 100% / @columns * @n;
+    .bmd(padding-right, ~"calc(@{val} + @{offset_bmd_one_side})");
 }
 
 .shift-md(@n){
@@ -265,6 +305,18 @@
 .shift-xxs-padding-right(@n){
     @val: 100% / @columns * @n;
     .xxs(padding-right, ~"calc(@{val} + @{offset_xxs_one_side})");
+}
+
+.bmd(@name, @value){
+    @media screen and (max-width: @break_bmd){
+        @{name}: @value;
+    }
+}
+
+.bmd-block(@content){
+    @media screen and (max-width: @break_bmd){
+        @content();
+    }
 }
 
 .md(@name, @value){
